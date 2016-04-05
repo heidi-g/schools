@@ -1,0 +1,20 @@
+{
+  "name": "recipe_me",
+  "version": "0.0.0",
+  "private": false,
+  "scripts": {
+    "start": "nodemon ./bin/www"
+  },
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "cheerio": "^0.20.0",
+    "express": "^4.13.4",
+    "hbs": "^4.0.0",
+    "nodemon": "^1.9.1",
+    "superagent": "^1.8.3",
+    "tape": "^4.5.1"
+  },
+  "devDependencies": {
+    "supertest": "^1.2.0"
+  }
+}
