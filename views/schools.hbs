@@ -8,19 +8,19 @@
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css">
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">
   <link rel="stylesheet" type="text/css" href="../styles.css">
+  <!-- .leaflet -->
   <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css"/>
-    <style>
-      #map {
-        height: 500px;
-        width: 700px;
-      }
-    </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+  <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+  <style>
+  #map {
+    height: 500px;
+    width: 500px;
+  }
+  </style>
 </head>
 <body>
- <!-- .leaflet -->
- <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
- <!-- .leaflet -->
-
  <div class="container">
   <h1>schools hbs</h1>
   <form class="search" id="search" action="/schools" accept-charset="UTF-8" method="post">
@@ -35,14 +35,45 @@
 
 <div id="mapid"></div>
 <script type='text/javascript'>
-  var mymap = L.map('mapid').setView([51.505, -0.09], 13);
 
-  L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+var map = L.map('mapid');
+
+L.tileLayer('https://api.tiles.mapbox.com/v4/wishmouse.pjn18je0/{z}/{x}/{y}.png?access_token={accessToken}', {
     attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
-    maxZoom: 18,
-    id: 'wishmouse.pjn18je0',
-    accessToken: 'pk.eyJ1Ijoid2lzaG1vdXNlIiwiYSI6ImNpbW8zNDA4ejAwYXd0a2x5ZHk2b3N5M2EifQ.3cCg9wh79R6NeQkVlH-TvQ'
-}).addTo(mymap);
+    accessToken: 'pk.eyJ1Ijoid2lzaG1vdXNlIiwiYSI6ImNpbW8zNDA4ejAwYXd0a2x5ZHk2b3N5M2EifQ.3cCg9wh79R6NeQkVlH-TvQ',
+    maxZoom: 18
+}).addTo(map);
+
+map.locate({setView: true, maxZoom: 16});
+
+function onLocationFound(e) {
+    var radius = e.accuracy / 2;
+
+    L.marker(e.latlng).addTo(map)
+        .bindPopup("You are within " + radius + " meters from this point").openPopup();
+
+    L.circle(e.latlng, radius).addTo(map);
+}
+
+map.on('locationfound', onLocationFound);
+
+function onLocationError(e) {
+    alert(e.message);
+}
+
+map.on('locationerror', onLocationError);
+
+
+// var mymap = L.map('mapid').setView([51.505, -0.09],17);
+
+// L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+//  maxZoom: 18,
+//  id: 'wishmouse.pjn18je0',
+//  accessToken: 'pk.eyJ1Ijoid2lzaG1vdXNlIiwiYSI6ImNpbW8zNDA4ejAwYXd0a2x5ZHk2b3N5M2EifQ.3cCg9wh79R6NeQkVlH-TvQ'
+// }).addTo(mymap);
+
+// var marker = L.marker([51.5, -0.09]).addTo(mymap);
+
 </script>
 
 
