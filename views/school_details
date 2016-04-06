@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css">
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">
-<link rel="stylesheet" type="text/css" href="./stylesheets/style.css">
+<link rel="stylesheet" type="text/css" href="./stylesheet/styles.css">
 
 
 <!-- .container is main centered wrapper -->

@@ -1,20 +1,51 @@
 <!DOCTYPE html>
-<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css">
-<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">
-<link rel="stylesheet" type="text/css" href="./stylesheets/style.css">
+<html lang="en">
+<head>
 
+  <meta charset="utf-8">
+  <title></title>
 
-<!-- .container is main centered wrapper -->
-<div class="container">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">
+  <link rel="stylesheet" type="text/css" href="../styles.css">
+  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css"/>
+    <style>
+      #map {
+        height: 500px;
+        width: 700px;
+      }
+    </style>
+</head>
+<body>
+ <!-- .leaflet -->
+ <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+ <!-- .leaflet -->
+
+ <div class="container">
   <h1>schools hbs</h1>
   <form class="search" id="search" action="/schools" accept-charset="UTF-8" method="post">
     <p>
-      <input placeholder="enter school name" type="text" name="name" id="input1" /><br><br>
-      <input value="search"type="submit" id="find"></input>
+      <button id="mySearch">Find Schools near me </button>
+      <br>
+      <input placeholder="enter school name" type="text" name="name" id="input1" />
+      <input value="search" type="submit" id="find"></input>
     </p>
   </form>
-
-</div>
 </div>
 
-</div>
+<div id="mapid"></div>
+<script type='text/javascript'>
+  var mymap = L.map('mapid').setView([51.505, -0.09], 13);
+
+  L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+    attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
+    maxZoom: 18,
+    id: 'wishmouse.pjn18je0',
+    accessToken: 'pk.eyJ1Ijoid2lzaG1vdXNlIiwiYSI6ImNpbW8zNDA4ejAwYXd0a2x5ZHk2b3N5M2EifQ.3cCg9wh79R6NeQkVlH-TvQ'
+}).addTo(mymap);
+</script>
+
+
+</body>
+</html>
+
