@@ -10,11 +10,13 @@
     "cheerio": "^0.20.0",
     "express": "^4.13.4",
     "hbs": "^4.0.0",
+    "leaflet-routing-machine": "^2.6.2",
     "nodemon": "^1.9.1",
     "superagent": "^1.8.3",
     "tape": "^4.5.1"
   },
   "devDependencies": {
+    "grunt-": "^0.1.0",
     "supertest": "^1.2.0"
   }
 }
