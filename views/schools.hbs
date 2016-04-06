@@ -39,20 +39,19 @@
 var map = L.map('mapid');
 
 L.tileLayer('https://api.tiles.mapbox.com/v4/wishmouse.pjn18je0/{z}/{x}/{y}.png?access_token={accessToken}', {
-    attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
     accessToken: 'pk.eyJ1Ijoid2lzaG1vdXNlIiwiYSI6ImNpbW8zNDA4ejAwYXd0a2x5ZHk2b3N5M2EifQ.3cCg9wh79R6NeQkVlH-TvQ',
     maxZoom: 18
 }).addTo(map);
 
-map.locate({setView: true, maxZoom: 16});
+map.locate({setView: true, maxZoom: 17});
 
 function onLocationFound(e) {
     var radius = e.accuracy / 2;
 
-    L.marker(e.latlng).addTo(map)
-        .bindPopup("You are within " + radius + " meters from this point").openPopup();
+    L.marker(e.latlng).addTo(map);
+        // .bindPopup("You are within " + radius + " meters from this point").openPopup();
 
-    L.circle(e.latlng, radius).addTo(map);
+    // L.circle(e.latlng, radius).addTo(map);
 }
 
 map.on('locationfound', onLocationFound);
