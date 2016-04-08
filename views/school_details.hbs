@@ -1,11 +1,25 @@
-<!DOCTYPE html>
-<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css">
-<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">
-<link rel="stylesheet" type="text/css" href="./stylesheet/styles.css">
+ <html>
+ <head>
 
+  <meta charset="utf-8">
+  <title></title>
 
-<!-- .container is main centered wrapper -->
-<div class="container">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">
+  <link rel="stylesheet" type="text/css" href="../styles.css">
+  <!-- .Google -->
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+  <meta charset="utf-8">
+
+  <style>
+  #map {
+    height: 500px;
+    width: 500px;
+  }
+  </style>
+</head>
+<body>
+ <div class="container">
   <h1>school details hbs</h1>
   <form class="search" id="search" action="/schools" accept-charset="UTF-8" method="post">
     <p>
@@ -13,8 +27,21 @@
       <input value="search"type="submit" id="find"></input>
     </p>
   </form>
-
-</div>
 </div>
 
-</div>
+<style>
+#map {
+  height: 500px;
+  width: 500px;
+}
+</style>
+<div id="map" class="map"></div>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBaKgR9OOeCwqez-NGNGNtIA7d4JjODHfg
+">
+</script>
+<script src ="googlemap.js"> </script>
+
+
+</body>
+</html>

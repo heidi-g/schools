@@ -16,7 +16,7 @@
     "tape": "^4.5.1"
   },
   "devDependencies": {
-    "grunt-": "^0.1.0",
+    "dotenv": "^2.0.0",
     "supertest": "^1.2.0"
   }
 }

@@ -1,51 +1,39 @@
+if (navigator.geolocation) { //Checks if browser supports geolocation
+    navigator.geolocation.getCurrentPosition(function (position) {//This gets the
+     var latitude = position.coords.latitude;                    //users current
+     var longitude = position.coords.longitude;                 //location
+     var coords = new google.maps.LatLng(latitude, longitude); //Creates variable for map coordinates
+     var directionsService = new google.maps.DirectionsService();
+     var directionsDisplay = new google.maps.DirectionsRenderer();
+     var mapOptions = //Sets map options
 
-
-
-
-
-var Center = new google.maps.LatLng(18.210885, -67.140884);
-var directionsDisplay;
-var directionsService = new google.maps.DirectionsService();
-var map;
-
-function initialize() {
-  directionsDisplay = new google.maps.DirectionsRenderer();
-  var properties = {
-    center: Center,
-    zoom: 20,
-    mapTypeId: google.maps.MapTypeId.SATELLITE
-  };
-
-  map = new google.maps.Map(document.getElementById("map"), properties);
-  directionsDisplay.setMap(map);
-
-  var marker = new google.maps.Marker({
-    position: Center,
-   });
-
-  marker.setMap(map);
-  Route();
-}
-
-function Route() {
-
-  var start = new google.maps.LatLng(18.210885, -67.140884);
-  var end = new google.maps.LatLng(18.211685, -67.141684);
-  var request = {
-    origin: start,
-    destination: end,
-    travelMode: google.maps.TravelMode.DRIVING //CHECK IT OUT
-  };
-  directionsService.route(request, function(result, status) {
-    if (status == google.maps.DirectionsStatus.OK) {
-      directionsDisplay.setDirections(result);
-    } else {
-      alert("couldn't get directions:" + status);
-    }
+     {
+       zoom: 15,  //Sets zoom level (0-21)
+       center: coords, //zoom in on users location
+       mapTypeControl: true, //allows you to select map type eg. map or satellite
+       navigationControlOptions:
+       {
+         style: google.maps.NavigationControlStyle.SMALL //sets map controls size eg. zoom
+       },
+       mapTypeId: google.maps.MapTypeId.ROADMAP //sets type of map Options:ROADMAP, SATELLITE, HYBRID, TERRIAN
+     };
+     map = new google.maps.Map( /*creates Map variable*/ document.getElementById("map"), mapOptions /*Creates a new map using the passed optional parameters in the mapOptions parameter.*/);
+     directionsDisplay.setMap(map);
+     directionsDisplay.setPanel(document.getElementById('panel'));
+     var request = {
+       origin: coords,
+       destination: 'BT42 1FL',
+       travelMode: google.maps.DirectionsTravelMode.DRIVING
+     };
+     directionsService.route(request, function (response, status) {
+       if (status == google.maps.DirectionsStatus.OK) {
+         directionsDisplay.setDirections(response);
+       }
+     });
+     var marker = new google.maps.Marker({
+      position: {lat:latitude, lng: longitude},
+      map: map
+    });
   });
+ }
 }
-
-google.maps.event.addDomListener(window, 'load', initialize);
-
-async defer
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBaKgR9OOeCwqez-NGNGNtIA7d4JjODHfg&callback=initMap">
