@@ -12,19 +12,16 @@
   <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
   <meta charset="utf-8">
 
-  <style>
-  #map {
-    height: 500px;
-    width: 500px;
-  }
-  </style>
 </head>
 <body>
  <div class="container">
   <h1>schools hbs</h1>
 
-
-<button id="schoolSearch">school 1 </button>
+{{#each schools}}
+  <br>
+  <button class="button" data-id="{{id}}">{{id}}: {{name}}</button></li>
+  <br>
+  {{/each}}
 
   <!-- <form class="search" id="search" action="/schools" accept-charset="UTF-8" method="post">
     <p>

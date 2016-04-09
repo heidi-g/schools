@@ -36,4 +36,3 @@ if (navigator.geolocation) { //Checks if browser supports geolocation
     });
   });
  }
-}
