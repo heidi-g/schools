@@ -6,6 +6,7 @@ var currentLat;
 var currentLong;
 
 var clickForLocation = document.getElementById("geoLocation")
+
 function initMap() {
   map = new google.maps.Map(document.getElementById('map'), {
     center: {lat: currentLat, lng: currentLong},
@@ -17,6 +18,7 @@ function initMap() {
       stylers: [{ visibility: 'on' }]
     }]
   });
+
 if (navigator.geolocation) { /// start of geolocator
           navigator.geolocation.getCurrentPosition(function(position) {
             currentLat = position.coords.latitude
