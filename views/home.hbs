@@ -4,7 +4,7 @@
 
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css">
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">
-<link rel="stylesheet" type="text/css" href="./stylesheets/style.css">
+<link rel="stylesheet" type="text/css" href="./stylesheet/style.css">
 <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
 
@@ -14,19 +14,17 @@
   <form class="search" id="search" action="/schools" accept-charset="UTF-8" method="post">
     <p>
       <input placeholder="enter school name" type="text" name="name" id="input1" /><br><br>
-      <input value="search" type="submit" id="find"></input>
-    </p>
+      <input value="click for schools" type="submit" id="find"></input>
+      </p>
   </form>
-
+</div>
+<div role="main" class="ui-content">
+    <button id="getGeolocation">get geolocation</button>
 </div>
 
+
     <style>
-      html, body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-      }
-      #map {
+        #map {
         height: 500px;
         width: 500px;
       }
@@ -34,39 +32,12 @@
   </head>
   <body>
     <div id="map"></div>
-    <script>
-      // Note: This example requires that you consent to location sharing when
-      // prompted by your browser. If you see the error "The Geolocation service
-      // failed.", it means you probably did not give permission for the browser to
-      // locate you.
 
 
-      function initMap() {
-        var map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: -34.397, lng: 150.644},
-          zoom: 15
-        });
+>
 
 
-        // Try HTML5 geolocation.
-        if (navigator.geolocation) {
-          navigator.geolocation.getCurrentPosition(function(position) {
-            var pos = {
-              lat: position.coords.latitude,
-              lng: position.coords.longitude
-            };
-            map.setCenter(pos);
-            console.log(pos, "current positon")
-          }, function() {
-            handleLocationError(true, infoWindow, map.getCenter());
-          });
-        }
-
-      }
-
-
-
-    </script>
+    <script src ="../googleLocation.js"> </script>
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBaKgR9OOeCwqez-NGNGNtIA7d4JjODHfg&callback=initMap">
         </script>
