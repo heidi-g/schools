@@ -19,7 +19,7 @@ function initMap() {
       stylers: [{ visibility: 'on' }]
     }]
   });
-
+// test
 if (navigator.geolocation) { /// start of geolocator
           navigator.geolocation.getCurrentPosition(function(position) {
             currentLat = position.coords.latitude

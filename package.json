@@ -3,7 +3,9 @@
   "version": "0.0.0",
   "private": false,
   "scripts": {
-    "start": "nodemon ./bin/www"
+    "start": "nodemon ./bin/www",
+    "build": "browserify client_js/googleCurrentLocation.js > public/bundle.js",
+    "watch": "watchify -t hbsfy client_js/*.js -o public/bundle.js"
   },
   "dependencies": {
     "body-parser": "^1.15.0",
@@ -17,12 +19,15 @@
     "uniq": "^1.0.1"
   },
   "devDependencies": {
+    "browserify": "^13.0.0",
     "dotenv": "^2.0.0",
     "grunt": "^1.0.1",
+    "gulp-watchify": "^0.6.0",
+    "hbsfy": "^2.6.0",
     "jquery": "^2.2.3",
     "jsdom": "^8.3.0",
     "supertest": "^1.2.0",
+    "uglifyify": "^3.0.1",
     "uniq": "^1.0.1"
   }
 }
-

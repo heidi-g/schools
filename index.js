@@ -5,17 +5,19 @@ var fs = require ('fs'); /// ask Tony
 var request = require('superagent');
 var dotenv = require('dotenv').config();
 var schoolList = require('./data/school_list.js');
-var $ = require('jquery')
 // require dotenv - look at npm docs for this
 
+console.log('hi')
+
 var app = express();
+
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(express.static(path.join(__dirname)));
+
 
 
 app.get('/', function(req, res) {
@@ -42,8 +44,8 @@ app.post('/schools', function(req, res) {
 
 // when school details
 app.get('/school_details/:id', function(req, res) {
-  var key = process.env.GOOGLE_MAPS_API
-  res.render('school_details', schoolList)
+  // var key = process.env.GOOGLE_MAPS_API
+  res.render('school_details', schoolList.schools[req.params.id])
 })
 
 
