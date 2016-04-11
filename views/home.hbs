@@ -1,19 +1,42 @@
 <!DOCTYPE html>
+<html>
+  <head>
+
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css">
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">
-<link rel="stylesheet" type="text/css" href="./stylesheets/style.css">
+<link rel="stylesheet" type="text/css" href="./stylesheet/style.css">
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
 
+<h1>HOME!! </h1>
 
-<!-- .container is main centered wrapper -->
 <div class="container">
   <form class="search" id="search" action="/schools" accept-charset="UTF-8" method="post">
     <p>
       <input placeholder="enter school name" type="text" name="name" id="input1" /><br><br>
-      <input value="search"type="submit" id="find"></input>
-    </p>
+      <input value="click for schools" type="submit" id="find"></input>
+      </p>
   </form>
+</div>
+<div role="main" class="ui-content">
+    <button id="getGeolocation">get geolocation</button>
+</div>
 
-</div>
-</div>
 
-</div>
+    <style>
+        #map {
+        height: 500px;
+        width: 500px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+
+
+    <script src ="../googleCurrentLocation.js"> </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBaKgR9OOeCwqez-NGNGNtIA7d4JjODHfg&callback=initMap">
+        </script>
+  </body>
+</html>
