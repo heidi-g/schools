@@ -1,8 +1,8 @@
-var map;
-var infoWindow;
-var service;
-var currentLat;
-var currentLong;
+var map
+var infoWindow
+var service
+var currentLat
+var currentLong
 var pos
 var clickForLocation = document.getElementById("geoLocation")
 
@@ -32,41 +32,44 @@ if (navigator.geolocation) { /// start of geolocator
       var marker = new google.maps.Marker({
        position:pos,
        map: map
-        //end of
+
       });
     console.log(pos, "current positon")
     console.log(currentLat, "current Lat")
     console.log(currentLong, "current Long")
   });
+}//end of geolator and marker
 
-}
 
-  var directionsDisplay = new google.maps.DirectionsRenderer;
-  var directionsService = new google.maps.DirectionsService;
-  var map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 15,
-    center: pos
-  });
-  directionsDisplay.setMap(map);
 
-  var onChangeHandler = function() {
-    calculateAndDisplayRoute(directionsService, directionsDisplay);
-  };
-}
-console.log("line 67***********************")
+// var directionsDisplay;
+// var directionsService = new google.maps.DirectionsService();
 
-function calculateAndDisplayRoute(directionsService, directionsDisplay) {
-  var start = pos
-  var end = "15 Allen St, Te Aro, Wellington 6011"
-  directionsService.route({
-    origin: start,
-    destination: end,
-    travelMode: google.maps.TravelMode.DRIVING
-  }, function(response, status) {
-    if (status === google.maps.DirectionsStatus.OK) {
-      directionsDisplay.setDirections(response);
-    } else {
-      window.alert('Directions request failed due to ' + status);
-    }
-  });
+// function initialize() {
+//   directionsDisplay = new google.maps.DirectionsRenderer();
+//   var chicago = new google.maps.LatLng(41.850033, -87.6500523);
+//   var mapOptions = {
+//     zoom:7,
+//     center: chicago
+//   }
+//   // map = new google.maps.Map(document.getElementById("map"), mapOptions);
+//   // directionsDisplay.setMap(map);
+//   // directionsDisplay.setPanel(document.getElementById("directionsPanel"));
+// }
+
+// function calcRoute() {
+//   var start = "15 Allen St, Te Aro, Wellington 6011";
+//   var end = pos; //defined above
+//   var request = {
+//     origin:start,
+//     destination:end,
+//     travelMode: google.maps.TravelMode.DRIVING
+//   };
+//   directionsService.route(request, function(response, status) {
+//     if (status == google.maps.DirectionsStatus.OK) {
+//       directionsDisplay.setDirections(response);
+//     }
+//   });
+// }
+
 }
