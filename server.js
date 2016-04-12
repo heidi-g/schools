@@ -29,14 +29,15 @@ app.get('/home', function(req, res) {
 })
 
 app.post('/schools', function(req, res) {
-  console.log(req.body.name)
+  console.log(req.body, "rec.body")
     var id = schoolList.schools[0].id
 
   // find schools in the nearby area usign this location,
   // create and object with these schools in (or save them to db)
   // pass them into schools tamplate, so that schools can render them
   // suggest using handlebars, then using {{#each}} to iterate through the school to display them in the view
-  console.log(id,"...school ID by variable")
+
+
   res.render('schools', schoolList)
   //
 })

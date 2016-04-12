@@ -18,9 +18,9 @@
   <h1>schools hbs</h1>
 
 {{#each schools}}
-  <li>
+  <li><a href=/school_details/{{this.id}}>{{this.name}}</li>
   <br>
-  <button class="button" data-id="{{id}}">{{id}}: {{name}}</button></li>
+<!--   <button class="button" data-id="{{id}}">{{id}}: {{name}}</button></li> -->
   <br>
   {{/each}}
 

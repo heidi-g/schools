@@ -4,7 +4,7 @@ var infoWindow;
 var service;
 var currentLat;
 var currentLong;
-var $ = require('jquery')
+
 
 var clickForLocation = document.getElementById("geoLocation")
 
@@ -34,6 +34,7 @@ if (navigator.geolocation) { /// start of geolocator
                    map: map
 
                   });
+            console.log(schoolsDB.schools)
             console.log(pos, "current positon")
             console.log(currentLat, "current Lat")
             console.log(currentLong, "current Long")
@@ -43,8 +44,6 @@ if (navigator.geolocation) { /// start of geolocator
     // The idle event is a debounced event, so we can query & listen without
   // throwing too many requests at the server.
 }
-
-global.initMap = initMap
 
 
 var directionsDisplay;
@@ -71,5 +70,3 @@ function calcRoute() {
     }
   });
 }
-
-

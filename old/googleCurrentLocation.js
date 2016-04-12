@@ -1,10 +1,9 @@
-// current location
 var map;
 var infoWindow;
 var service;
 var currentLat;
 var currentLong;
-var $ = require('jquery')
+var $ = require('jquery') // does not work in views
 
 var clickForLocation = document.getElementById("geoLocation")
 
@@ -19,7 +18,7 @@ function initMap() {
       stylers: [{ visibility: 'on' }]
     }]
   });
-// test
+
 if (navigator.geolocation) { /// start of geolocator
           navigator.geolocation.getCurrentPosition(function(position) {
             currentLat = position.coords.latitude
@@ -45,3 +44,4 @@ function showPosition(position) {
     clickForLocation.innerHTML = "Latitude: " + position.coords.latitude +
     "<br>Longitude: " + position.coords.longitude;
 }
+

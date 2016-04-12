@@ -1,55 +1,30 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
-(function (global){
-// current location
-var map;
-var infoWindow;
-var service;
-var currentLat;
-var currentLong;
-var $ = require('jquery')
+var $ = require("jquery")
 
-var clickForLocation = document.getElementById("geoLocation")
 
-function initMap() {
-  map = new google.maps.Map(document.getElementById('map'), {
-    // center: {lat: currentLat, lng: currentLong},
-    zoom: 15,
-    styles: [{
-      stylers: [{ visibility: 'simplified' }]
-    }, {
-      elementType: 'labels',
-      stylers: [{ visibility: 'on' }]
-    }]
-  });
-// test
-if (navigator.geolocation) { /// start of geolocator
-          navigator.geolocation.getCurrentPosition(function(position) {
-            currentLat = position.coords.latitude
-            currentLong = position.coords.longitude
-            var pos = {
-              lat: position.coords.latitude,
-              lng: position.coords.longitude
-            };
-            map.setCenter(pos);
-            console.log(pos, "current positon")
-            console.log(currentLat, "current Lat")
-            console.log(currentLong, "current Long")
-          });
-        }  //end of
+module.exports = {
+  getGeolocation: function(){
+    if (navigator.geolocation) { /// start of geolocator
+      navigator.geolocation.getCurrentPosition(function(position) {
+        currentLat = position.coords.latitude
+        currentLong = position.coords.longitude
+        $("#lat").val(currentLat)
+        $("#lng").val(currentLong)
+      });
+    }  //end of
+  }
+} //getGeolocation is the eventListener.
 
-    // The idle event is a debounced event, so we can query & listen without
-  // throwing too many requests at the server.
-}
+},{"jquery":3}],2:[function(require,module,exports){
+var listeners = require('./events.js')
+var $ = require("jquery")
 
-global.initMap = initMap
+$(document).ready(function(){
+  listeners.getGeolocation()
+})
 
-function showPosition(position) {
-    clickForLocation.innerHTML = "Latitude: " + position.coords.latitude +
-    "<br>Longitude: " + position.coords.longitude;
-}
 
-}).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"jquery":2}],2:[function(require,module,exports){
+},{"./events.js":1,"jquery":3}],3:[function(require,module,exports){
 /*!
  * jQuery JavaScript Library v2.2.3
  * http://jquery.com/
@@ -9893,4 +9868,4 @@ if ( !noGlobal ) {
 return jQuery;
 }));
 
-},{}]},{},[1]);
+},{}]},{},[1,2]);
