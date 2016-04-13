@@ -34,10 +34,9 @@ if (navigator.geolocation) { /// start of geolocator
                    map: map
 
                   });
-            console.log(schoolsDB.schools)
             console.log(pos, "current positon")
             console.log(currentLat, "current Lat")
-            console.log(currentLong, "current Long")
+            console.log(curr entLong, "current Long")
           });
         }  //end of
 
