@@ -1,5 +1,6 @@
-
 exports.up = function(knex, Promise) {
+
+return knex.schema.createTable('schoolsTable', function (table) {
 
   table.increments()
   table.string("name")
@@ -9,8 +10,10 @@ exports.up = function(knex, Promise) {
   table.string("street")
   table.string("suburb")
   table.string("city")
-  table.intiger("longitude")
-  table.intiger("latitude")
+  table.integer("longitude")
+  table.integer("latitude")
+})
+
 };
 
 exports.down = function(knex, Promise) {

@@ -36,7 +36,7 @@ if (navigator.geolocation) { /// start of geolocator
                   });
             console.log(pos, "current positon")
             console.log(currentLat, "current Lat")
-            console.log(curr entLong, "current Long")
+            console.log(currentLong, "current Long")
           });
         }  //end of
 
