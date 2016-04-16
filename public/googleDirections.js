@@ -1,3 +1,5 @@
+
+
 // current location
 var map;
 var infoWindow;
@@ -36,7 +38,7 @@ if (navigator.geolocation) { /// start of geolocator
                   });
             console.log(pos, "current positon")
             console.log(currentLat, "current Lat")
-            console.log(curr entLong, "current Long")
+            console.log(currentLong, "current Long")
           });
         }  //end of
 
@@ -45,27 +47,27 @@ if (navigator.geolocation) { /// start of geolocator
 }
 
 
-var directionsDisplay;
-var directionsService = new google.maps.DirectionsService();
+// var directionsDisplay;
+// var directionsService = new google.maps.DirectionsService();
 
-function initialize() {
-  directionsDisplay = new google.maps.DirectionsRenderer();
-  // map = new google.maps.Map(document.getElementById("map"), mapOptions);
-  // directionsDisplay.setMap(map);
-  // directionsDisplay.setPanel(document.getElementById("directionsPanel"));
-}
+// function initialize() {
+//   directionsDisplay = new google.maps.DirectionsRenderer();
+//   // map = new google.maps.Map(document.getElementById("map"), mapOptions);
+//   // directionsDisplay.setMap(map);
+//   // directionsDisplay.setPanel(document.getElementById("directionsPanel"));
+// }
 
-function calcRoute() {
-  var start = "15 Allen St, Te Aro, Wellington 6011";
-  var end = pos; //defined above
-  var request = {
-    origin:start,
-    destination:end,
-    travelMode: google.maps.TravelMode.DRIVING
-  };
-  directionsService.route(request, function(response, status) {
-    if (status == google.maps.DirectionsStatus.OK) {
-      directionsDisplay.setDirections(response);
-    }
-  });
-}
+// function calcRoute() {
+//   var start = "15 Allen St, Te Aro, Wellington 6011";
+//   var end = pos; //defined above
+//   var request = {
+//     origin:start,
+//     destination:end,
+//     travelMode: google.maps.TravelMode.DRIVING
+//   };
+//   directionsService.route(request, function(response, status) {
+//     if (status == google.maps.DirectionsStatus.OK) {
+//       directionsDisplay.setDirections(response);
+//     }
+//   });
+// }

@@ -8,4 +8,16 @@ var schools = {
     {'id': "5", 'name': "Mt Vic School", 'lat': "174.760124", 'lng': "-41.260854"}
     ]
 }
+
+// console.log(schools.schools[4].name, "shows Newtown school... excellent")
+
+
+// var p1 = new google.maps.LatLng(-41.29690919999999, 174.77421930000003);
+// var p2 = new google.maps.LatsLng(-41.2969211, 174.7737855);
+
+
+// function calcDistance(p1, p2) {
+//   return (google.maps.geometry.spherical.computeDistanceBetween(p1, p2));
+// }
+
 module.exports = schools

@@ -1,9 +1,9 @@
 var $ = require("jquery")
 
-$( document ).ready(function() {
+// $( document ).ready(function() {
 
-    console.log(calcDistance(p1, p2));
-});
+//     console.log(calcDistance(p1, p2));
+// });
 
 module.exports = {
   getGeolocation: function(){
@@ -21,11 +21,5 @@ module.exports = {
 
 // calculate distance between two points.
 
-var p1 = new google.maps.LatLng(-41.29690919999999, 174.77421930000003);
-var p2 = new google.maps.LatLng(-41.2969211, 174.7737855);
 
-
-function calcDistance(p1, p2) {
-  return (google.maps.geometry.spherical.computeDistanceBetween(p1, p2));
-}
 

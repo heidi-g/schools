@@ -1,11 +1,42 @@
-#mapid { height: 500px;
+#map{ height: 500px;
   width: 500px;
+  margin-left: 75px;
 }
 
-html, body, #map {
+html, body {
     height: 100%;
+    background-color: #a7dbd8;
 }
 h1{
   color: red;
 }
 
+#principal{
+color: black;
+font-size: 25pt;
+line-height: 10px;
+}
+
+#telephone{
+font-size: 30px;
+line-height: 10px;
+}
+
+#email{
+font-size: 20px;
+line-height: 10px;
+
+}
+
+#address{
+font-size: 20px;
+line-height: 10px;
+}
+
+#name{
+font-size: 40px;
+}
+
+
+
+http://www.colourlovers.com/palette/92095/Giant_Goldfish

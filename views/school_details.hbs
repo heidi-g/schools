@@ -1,9 +1,7 @@
  <html>
  <head>
-
   <meta charset="utf-8">
   <title></title>
-
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css">
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">
   <link rel="stylesheet" type="text/css" href="/styles.css">
@@ -11,45 +9,25 @@
   <!-- .Google -->
   <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
   <meta charset="utf-8">
-
-  <style>
-  #map {
-    height: 500px;
-    width: 500px;
-  }
-  </style>
 </head>
 <body>
- <div class="container">
+ <div class="container"><centre>
   <h1>school details hbs</h1>
   <form class="search" id="search" action="/schools" accept-charset="UTF-8" method="post">
-    <p>
-      <input placeholder="enter school name" type="text" name="name" id="input1" /><br><br>
-      <input value="search"type="submit" id="find"></input>
+    <p id="principal">{{principal}} Heidi Goosen</p>
+    <p id="telephone">{{telephone}} 021 979 822 </p>
+    <p id="email">{{email}} heidi.goosen@yahoo.com</p>
+    <p id="address">{{street}} 15 Allen Street East, {{suburb}} Newtown Another</p>
     </p>
   </form>
+  <p id="name">{{name}}'s school </p>
 </div>
-
-<style>
-#map {
-  height: 500px;
-  width: 500px;
-}
-</style>
-
-<h3><center>{{name}}'s school bits and peices</center></h3>
-
-
-
 <div id="map" class="map"></div>
+</centre>
 
 <script src ="/googleDirections.js"> </script>
 <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBaKgR9OOeCwqez-NGNGNtIA7d4JjODHfg&callback=initMap">
         </script>
-
-
-
-
 </body>
 </html>

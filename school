@@ -1,0 +1,75 @@
+#!/usr/bin/env node
+var knex = require('knex')({
+  client: 'sqlite3',
+  connection: {
+    filename: __dirname + '/dev.sqlite3'
+  },
+  useNullAsDefault: true
+})
+
+var cmd = process.argv[2]
+var note = process.argv[3]
+var updateId = process.argv[4]
+
+
+switch (cmd) {
+
+  case 'list':
+  getAll()
+  .then(listSchools)
+  .catch(logError)
+  .finally(closeDB)
+  break
+
+  case 'search':
+  search(note)
+  .then(listTodos)
+  .catch(logError)
+  .finally(closeDB)
+  break
+
+  case 'location':
+  location()
+  .then(listSchools)
+  .catch(logError)
+  .finally(closeDB)
+  break
+
+
+  default:
+  console.log('no matched cases')
+  closeDB()
+  break
+}
+
+
+function listSchools(allSchools){
+  allSchools.forEach(function (school) { console.log(school.id,school.longitude, school.latitude, school.name)
+
+})
+}
+
+function location() {
+  return knex.raw('SELECT id,name,longitude,latitude FROM "schoolsTable" WHERE id='+ 7 +' ;')
+
+}
+
+
+function logError (err) {
+  console.log('Dang, we exploded like a bomb: ', err)
+}
+
+
+function getAll () {
+  return knex.raw('select * from "schoolsTable"')
+
+}
+
+function search(task){
+  return knex.raw('select * from "todos" WHERE task LIKE "%' + task + '%"')
+}
+
+function closeDB () {
+  knex.destroy()
+}
+module.exports = location
