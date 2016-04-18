@@ -23,7 +23,7 @@ switch (cmd) {
 
   case 'search':
   search(note)
-  .then(listTodos)
+  .then(listSchools)
   .catch(logError)
   .finally(closeDB)
   break
@@ -49,8 +49,14 @@ function listSchools(allSchools){
 })
 }
 
-function location() {
-  return knex.raw('SELECT id,name,longitude,latitude FROM "schoolsTable" WHERE id='+ 7 +' ;')
+function search() {//for testing
+  return knex.raw('SELECT id,name,telephone,email,principal,street,suburb FROM "schoolsTable" WHERE id='+ 8 +' ;')
+
+}
+
+
+function location() { //for testing
+  return knex.raw('SELECT id,name FROM "schoolsTable" WHERE id='+ 7 +' ;')
 
 }
 
@@ -65,9 +71,9 @@ function getAll () {
 
 }
 
-function search(task){
-  return knex.raw('select * from "todos" WHERE task LIKE "%' + task + '%"')
-}
+// function search(task){
+//   return knex.raw('select * from "todos" WHERE task LIKE "%' + task + '%"')
+// }
 
 function closeDB () {
   knex.destroy()
