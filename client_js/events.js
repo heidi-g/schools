@@ -17,9 +17,3 @@ module.exports = {
     }  //end of
   }
 } //getGeolocation is the eventListener.
-
-
-// calculate distance between two points.
-
-
-

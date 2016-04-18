@@ -5,26 +5,40 @@
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css">
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">
   <link rel="stylesheet" type="text/css" href="/styles.css">
+ <!-- .Google fonts -->
+  <link href='https://fonts.googleapis.com/css?family=Comfortaa:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
 
+  <!-- .END  Google fonts -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <!-- .Google -->
   <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
   <meta charset="utf-8">
 </head>
 <body>
- <div class="container"><centre>
-  <h1>school details hbs</h1>
+ <div class="container">
+  <div class="row">
+   <br>
+   <br>
+    <div class="col-md-12"><p id="principal">{{principal}}</p>
+    </div>
+    <div class="col-md-12"><p id="telephone">{{telephone}}</p>
+    </div>
+    <div class="col-md-12"><p id="email">{{email}}</p>
+    </div>
+    <div class="col-md-12"><p id="address">{{street}}, {{suburb}} </p>
+    </div>
+    <div class="col-md-12"><p id="suburb"></p>
+    </div>
+    <div class="col-md-12"><p id="name">{{name}}</p>
+    </div>
+    <div class="col-md-12"><div id="map" class="map"></div>
+    </div>
+  </div>
   <form class="search" id="search" action="/schools" accept-charset="UTF-8" method="post">
-    <p id="principal">{{principal}}</p>
-    <p id="telephone">{{telephone}}</p>
-    <p id="email">{{email}}</p>
-    <p id="address">{{street}}</p>
-    <p id="suburb"> {{suburb}}</p>
-    </p>
-  </form>
-  <p id="name">{{name}}</p>
+
 </div>
-<div id="map" class="map"></div>
-</centre>
 
 <script src ="/googleDirections.js"> </script>
 <script async defer

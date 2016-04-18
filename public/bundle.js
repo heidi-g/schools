@@ -19,12 +19,6 @@ module.exports = {
   }
 } //getGeolocation is the eventListener.
 
-
-// calculate distance between two points.
-
-
-
-
 },{"jquery":3}],2:[function(require,module,exports){
 var listeners = require('./events.js')
 var $ = require("jquery")
