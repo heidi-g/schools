@@ -14,10 +14,13 @@ module.exports = {
         currentLong = position.coords.longitude
         $("#lat").val(currentLat)
         $("#lng").val(currentLong)
+        console.log(currentLat, "latitude", currentLong, "currentLong")
       });
     }  //end of
   }
 } //getGeolocation is the eventListener.
+
+
 
 },{"jquery":3}],2:[function(require,module,exports){
 var listeners = require('./events.js')

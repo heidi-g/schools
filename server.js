@@ -63,6 +63,7 @@ app.get('/school_details/:id', function(req, res) {
       return req.params.id == school.id
     })[0]
     res.render('school_details', school)
+    console.log(school, "****************")
   })
 })
 

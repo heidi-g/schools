@@ -35,6 +35,11 @@ text-decoration: none;
 
 .container a {
 text-decoration: none;
+font-family: 'Quicksand', sans-serif;
+}
+
+#school{
+font-weight: bold;
 }
 
 .details {
