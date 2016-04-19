@@ -13,7 +13,13 @@ h1{
 }
 
 #find{
-background-color: orange;
+background: url(./arrow.png);
+width: 250px;
+height: 250px;
+border-radius: 50%;
+border: 0px solid;
+background-size: 250px;
+
 }
 
 #school{
@@ -31,32 +37,49 @@ text-decoration: none;
 text-decoration: none;
 }
 
+.details {
+padding-top: 30px;
+padding-left: 30px;
+padding-bottom: 10px;
+background-color: #E0E4CC;
+border-radius: 45px;
+border:3px solid #F38630;
+}
+
 #principal{
 color: black;
-font-size: 25pt;
-line-height: 10px;
+font-weight: bold;
+font-size: 35pt;
+line-height: 20px;
+margin-left: 50px;
 }
 
 #telephone{
 font-size: 30px;
-line-height: 10px;
+line-height: 15px;
+font-family: 'Quicksand', sans-serif;
+margin-left: 50px;
 }
 
 #email{
 font-size: 20px;
 line-height: 10px;
+margin-left: 50px;
 
 }
 
 #address{
 font-size: 20px;
 line-height: 10px;
-font-family: 'Pacifico', cursive;
+font-family: 'Roboto Condensed', sans-serif;
+margin-left: 50px;
 }
 
 #name{
 font-size: 40px;
+line-height: 20px;
 font-family: 'Quicksand', sans-serif;
+margin-left: 50px;
 }
 
 
