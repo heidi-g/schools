@@ -87,6 +87,9 @@ font-family: 'Quicksand', sans-serif;
 margin-left: 50px;
 }
 
-
+#lat {
+opacity: 0;}
+ #lng{
+opacity: 0;}
 
 http://www.colourlovers.com/palette/92095/Giant_Goldfish
