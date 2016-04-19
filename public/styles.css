@@ -33,6 +33,15 @@ font-size: 30px;
 text-decoration: none;
 }
 
+.more{
+  color: black;
+border:2px solid #F38630;
+border-radius: 45px;
+background-color: #69D2E7;
+padding: 5px;
+float: right;
+}
+
 .container a {
 text-decoration: none;
 font-family: 'Quicksand', sans-serif;

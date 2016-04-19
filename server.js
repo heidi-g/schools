@@ -6,10 +6,8 @@ var bodyParser = require('body-parser');
 var fs = require ('fs'); /// ask Tony
 var request = require('superagent');
 var dotenv = require('dotenv').config();
-var schoolList = require('./data/school_list.js');
+// var schoolList = require('./data/school_list.js');
 var geolib = require('geolib')
-
-// require dotenv - look at npm docs for this
 
 console.log('hi from Server.js')
 
@@ -63,12 +61,8 @@ app.get('/school_details/:id', function(req, res) {
       return req.params.id == school.id
     })[0]
     res.render('school_details', school)
-    console.log(school, "****************")
   })
 })
-
-
-
 
 
 module.exports = app;

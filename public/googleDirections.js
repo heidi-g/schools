@@ -11,7 +11,7 @@ var schoolLng = document.getElementById("lng").innerHTML
         callback(currentLat, currentLong)
       });
 
-    }  //end of
+    }  //end of geolocator
   }
 
 
