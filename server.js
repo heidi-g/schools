@@ -1,27 +1,24 @@
 var knexConfig = require('./knexfile')
 var knex = require('knex')(knexConfig[process.env.NODE_ENV || "development"])
 var express = require('express');
-var path = require('path');// addresses in a file system
+var path = require('path');
 var bodyParser = require('body-parser');
-var fs = require ('fs'); /// ask Tony
+var fs = require ('fs');
 var request = require('superagent');
 var dotenv = require('dotenv').config();
-// var schoolList = require('./data/school_list.js');
 var geolib = require('geolib')
 
 console.log('hi from Server.js')
 
 var app = express();
-var note = process.argv[2]
 
+var note = process.argv[2]
 function location() {
   return knex.raw('SELECT id,name,telephone,email,principal,street,suburb,city,longitude,latitude FROM "schoolsTable" WHERE longitude IS NOT NULL ;')
 }
 
-
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
-
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static("public"));
@@ -52,6 +49,8 @@ app.post('/schools', function(req, res) {
      res.render('schools', {schools: schoolsList})//renders the file with the data 5.
    })
 });  //waits for data 3.
+
+
 
 
 app.get('/school_details/:id', function(req, res) {

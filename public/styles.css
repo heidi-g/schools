@@ -27,14 +27,14 @@ color: black;
 border:3px solid #F38630;
 border-radius: 45px;
 background-color: #E0E4CC;
-padding: 20px;
+padding: .8em;
 text-align: center;
 font-size: 30px;
 text-decoration: none;
 }
 
 .more{
-  color: black;
+color: black;
 border:2px solid #F38630;
 border-radius: 45px;
 background-color: #69D2E7;
@@ -49,6 +49,7 @@ font-family: 'Quicksand', sans-serif;
 
 #school{
 font-weight: bold;
+font-size: 1.3em;
 }
 
 .details {
@@ -63,37 +64,31 @@ border:3px solid #F38630;
 #principal{
 color: black;
 font-weight: bold;
-font-size: 35pt;
-line-height: 20px;
-margin-left: 50px;
+font-size: 3em;
+line-height: 1em;
 }
 
 #telephone{
-font-size: 30px;
-line-height: 15px;
+font-size: 2.5em;
+line-height: .5em;
 font-family: 'Quicksand', sans-serif;
-margin-left: 50px;
 }
 
 #email{
-font-size: 20px;
-line-height: 10px;
-margin-left: 50px;
-
+font-size: 1.3em;
+line-height: .5em;
 }
 
 #address{
-font-size: 20px;
-line-height: 10px;
+font-size: 1em;
+line-height: .5em;
 font-family: 'Roboto Condensed', sans-serif;
-margin-left: 50px;
 }
 
 #name{
-font-size: 40px;
-line-height: 20px;
+font-size: 2em;
+line-height: 1em;
 font-family: 'Quicksand', sans-serif;
-margin-left: 50px;
 }
 
 #lat {
