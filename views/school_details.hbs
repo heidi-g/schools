@@ -1,11 +1,11 @@
  <html>
  <head>
   <meta charset="utf-8">
-<title>Reacher...</title>
+  <title>Reacher...</title>
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css">
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">
   <link rel="stylesheet" type="text/css" href="/styles.css">
- <!-- .Google fonts -->
+  <!-- .Google fonts -->
   <link href='https://fonts.googleapis.com/css?family=Comfortaa:400,700' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Righteous' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
@@ -35,20 +35,19 @@
     </div>
     <div class="col-md-12"><p id="name">{{name}}</p>
     </div>
-    </div>
   </div>
- </div>
+</div>
+</div>
 
-    <div class="col-md-12"><div id="map" class="map"></div>
+<div class="col-md-12"><div id="map" class="map"></div>
 
-  </div>
-  <form class="search" id="search" action="/schools" accept-charset="UTF-8" method="post">
+</div>
+<form class="search" id="search" action="/schools" accept-charset="UTF-8" method="post">
 
-    <p>
-      <input placeholder="enter school name" type="text" name="name" id="input1" /><br><br>
-      <input value="search"type="submit" id="find"></input>
-    </p>
-  </form>
+  <p>
+    <input value="search"type="submit" id="find"></input>
+  </p>
+</form>
 </div>
 
 <style>
@@ -60,19 +59,19 @@
 
 <h3><center>{{name}}'s school bits and peices</center></h3>
 <p>
-{{principal}}
-{{street}} {{suburb}}
-{{telephone}}  {{email}}
+  {{principal}}
+  {{street}} {{suburb}}
+  {{telephone}}  {{email}}
 </p>
 <div id="map" class="map"></div>
 
 
 </div>
-       <div id="lat" name="latitude" type="hidden">{{latitude}}</div>
-       <div id="lng" name="longitude" type="hidden">{{longitude}}</div>
+<div id="lat" name="latitude" type="hidden">{{latitude}}</div>
+<div id="lng" name="longitude" type="hidden">{{longitude}}</div>
 <script src ="/googleDirections.js"> </script>
 <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBaKgR9OOeCwqez-NGNGNtIA7d4JjODHfg&callback=initMap">
-        </script>
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBaKgR9OOeCwqez-NGNGNtIA7d4JjODHfg&callback=initMap">
+</script>
 </body>
 </html>
