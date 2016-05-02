@@ -44,6 +44,29 @@
   </div>
   <form class="search" id="search" action="/schools" accept-charset="UTF-8" method="post">
 
+    <p>
+      <input placeholder="enter school name" type="text" name="name" id="input1" /><br><br>
+      <input value="search"type="submit" id="find"></input>
+    </p>
+  </form>
+</div>
+
+<style>
+#map {
+  height: 500px;
+  width: 500px;
+}
+</style>
+
+<h3><center>{{name}}'s school bits and peices</center></h3>
+<p>
+{{principal}}
+{{street}} {{suburb}}
+{{telephone}}  {{email}}
+</p>
+<div id="map" class="map"></div>
+
+
 </div>
        <div id="lat" name="latitude" type="hidden">{{latitude}}</div>
        <div id="lng" name="longitude" type="hidden">{{longitude}}</div>

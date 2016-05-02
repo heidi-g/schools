@@ -21,16 +21,31 @@ switch (cmd) {
   .finally(closeDB)
   break
 
-  case 'search':
-  search(note)
+
+  case 'radius':
+  radius()
   .then(listSchools)
   .catch(logError)
   .finally(closeDB)
   break
 
+  case 'search':
+  search(note)
+  .then(listTodos)
+
+  .catch(logError)
+  .finally(closeDB)
+  break
+
+<<<<<<< HEAD
   case 'location':
   location()
   .then(listSchools)
+=======
+  case 'wordMatch':
+  wordMatch()
+  .then(listTodos)
+>>>>>>> 7ecd41a7e63d0c54b5ca71ebfe2f8d781770955b
   .catch(logError)
   .finally(closeDB)
   break
@@ -44,6 +59,7 @@ switch (cmd) {
 
 
 function listSchools(allSchools){
+<<<<<<< HEAD
   allSchools.forEach(function (school) { console.log(school.id,school.longitude, school.latitude, school.name)
 
 })
@@ -60,10 +76,17 @@ function location() { //for testing
 
 }
 
+=======
+  allSchools.forEach(function (school) { console.log(school.id, school.name, school.email)
+})
+}
+
+>>>>>>> 7ecd41a7e63d0c54b5ca71ebfe2f8d781770955b
 
 function logError (err) {
   console.log('Dang, we exploded like a bomb: ', err)
 }
+<<<<<<< HEAD
 
 
 function getAll () {
@@ -74,8 +97,20 @@ function getAll () {
 // function search(task){
 //   return knex.raw('select * from "todos" WHERE task LIKE "%' + task + '%"')
 // }
+=======
+function getAll () {
+  return knex.raw('select * from "schoolsTable"')
+}
+
+function search(task){
+  return knex.raw('select * from "todos" WHERE task LIKE "%' + task + '%"')
+}
+>>>>>>> 7ecd41a7e63d0c54b5ca71ebfe2f8d781770955b
 
 function closeDB () {
   knex.destroy()
 }
+<<<<<<< HEAD
 module.exports = location
+=======
+>>>>>>> 7ecd41a7e63d0c54b5ca71ebfe2f8d781770955b
