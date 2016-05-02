@@ -10,8 +10,8 @@ return knex.schema.createTableIfNotExists('schoolsTable', function (table) {
   table.string("street")
   table.string("suburb")
   table.string("city")
-  table.integer("longitude")
-  table.integer("latitude")
+  table.float("longitude")
+  table.float("latitude")
 })
 
 };
