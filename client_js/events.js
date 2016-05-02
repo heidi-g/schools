@@ -4,8 +4,7 @@ var Promise = require("promisify")
 // $( document ).ready(function() {
 
 
-});
-getGeolocation is the eventListener.
+
 
 
 module.exports = {
@@ -49,6 +48,7 @@ module.exports = {
 
 //   })
 // }
+
 
 
 
