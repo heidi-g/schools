@@ -57,7 +57,8 @@ app.post('/schools', function(req, res) {
 
 app.get('/school_details/:id', function(req, res) {
   location()
-  .then(function(schoolDetails){
+  .then(function(result){
+    var schoolDetails = result.rows
     var school = schoolDetails.filter(function(school){
       return req.params.id == school.id
     })[0]
