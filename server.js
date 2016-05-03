@@ -14,7 +14,7 @@ var app = express();
 
 var note = process.argv[2]
 function location() {
-  return knex.raw('SELECT id,name,telephone,email,principal,street,suburb,city,longitude,latitude FROM "schools" WHERE longitude IS NOT NULL ;')
+  return knex.raw('SELECT id,name,telephone,email,principal,street,suburb,city,longitude,latitude FROM "schools" WHERE longitude IS NOT NULL;')
 }
 
 app.set('views', path.join(__dirname, 'views'));
@@ -34,7 +34,9 @@ app.get('/home', function(req, res) {
 
 app.post('/schools', function(req, res) {
   location()
-  .then(function(schoolsList){
+  .then(function(result){
+    var schoolsList = result.rows
+    console.log(schoolsList, "schools list ")
       // console.log(req.body, "req.body **************")
       var sortedSchools = schoolsList.sort(function(a,b) {
         var aDistance = geolib.getDistance(a, req.body)
