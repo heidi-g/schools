@@ -14,7 +14,7 @@ var app = express();
 
 var note = process.argv[2]
 function location() {
-  return knex.raw('SELECT id,name,telephone,email,principal,street,suburb,city,longitude,latitude FROM "schoolsTable" WHERE longitude IS NOT NULL ;')
+  return knex.raw('SELECT id,name,telephone,email,principal,street,suburb,city,longitude,latitude FROM "schools" WHERE longitude IS NOT NULL ;')
 }
 
 app.set('views', path.join(__dirname, 'views'));
