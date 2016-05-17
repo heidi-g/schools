@@ -11,6 +11,12 @@ h1{
   text-align: center;
   font-size: 60px;
 }
+h2{
+  font-family: 'Righteous', cursive;
+  text-align: center;
+  font-size: 35px;
+}
+
 
 #find{
 background: url(./arrow.png);
@@ -53,9 +59,8 @@ font-size: 1.3em;
 }
 
 .details {
-padding-top: 30px;
+padding-top: 20px;
 padding-left: 30px;
-padding-bottom: 10px;
 background-color: #E0E4CC;
 border-radius: 45px;
 border:3px solid #F38630;
@@ -64,29 +69,29 @@ border:3px solid #F38630;
 #principal{
 color: black;
 font-weight: bold;
-font-size: 3em;
-line-height: 1em;
+font-size: 1.75em;
+line-height: .5em;
 }
 
 #telephone{
-font-size: 2.5em;
+font-size: 1.5em;
 line-height: .5em;
 font-family: 'Quicksand', sans-serif;
 }
 
 #email{
-font-size: 1.3em;
-line-height: .5em;
+font-size: 1em;
+line-height: .25em;
 }
 
 #address{
 font-size: 1em;
-line-height: .5em;
+line-height: .25em;
 font-family: 'Roboto Condensed', sans-serif;
 }
 
 #name{
-font-size: 2em;
+font-size: 1.3em;
 line-height: 1em;
 font-family: 'Quicksand', sans-serif;
 }
