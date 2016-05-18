@@ -35,8 +35,8 @@ app.get('/home', function(req, res) {
 app.post('/schools', function(req, res) {
   location()
   .then(function(schoolsList){
-      // console.log(req.body, "req.body **************")
-      var sortedSchools = schoolsList.sort(function(a,b) {
+    console.log('schoolsList:', schoolsList.rows.sort)
+      var sortedSchools = schoolsList.rows.sort(function(a,b) {
         var aDistance = geolib.getDistance(a, req.body)
         var bDistance = geolib.getDistance(b, req.body)
         if (aDistance > bDistance) return 1
@@ -56,7 +56,7 @@ app.post('/schools', function(req, res) {
 app.get('/school_details/:id', function(req, res) {
   location()
   .then(function(schoolDetails){
-    var school = schoolDetails.filter(function(school){
+    var school = schoolDetails.rows.filter(function(school){
       return req.params.id == school.id
     })[0]
     res.render('school_details', school)
