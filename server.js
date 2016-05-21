@@ -25,7 +25,7 @@ app.use(express.static("public"));
 
 
 app.get('/', function(req, res) {
-   res.redirect('/home') // what is this doing?
+   res.redirect('/home')
  });
 
 app.get('/home', function(req, res) {
@@ -44,11 +44,11 @@ app.post('/schools', function(req, res) {
             return 0
         })
       return sortedSchools.slice(0,5)
-    }) // returns a promise 1.
-    .then(function(schoolsList){ //saves a callaback 2.
-     res.render('schools', {schools: schoolsList})//renders the file with the data 5.
+    })
+    .then(function(schoolsList){
+     res.render('schools', {schools: schoolsList})
    })
-});  //waits for data 3.
+});
 
 
 

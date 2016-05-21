@@ -2,17 +2,17 @@ var schoolLat = document.getElementById("lat").innerHTML
 var schoolLng = document.getElementById("lng").innerHTML
 
 
-  function getGeolocation(callback){
-    if (navigator.geolocation) { /// start of geolocator
-      navigator.geolocation.getCurrentPosition(function(position) {
-        var currentLat = position.coords.latitude
-        var currentLong = position.coords.longitude
-        console.log(currentLat, "latitude", currentLong, "currentLong")
-        callback(currentLat, currentLong)
-      });
+function getGeolocation(callback){
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(function(position) {
+      var currentLat = position.coords.latitude
+      var currentLong = position.coords.longitude
+      console.log(currentLat, "latitude", currentLong, "currentLong")
+      callback(currentLat, currentLong)
+    });
 
-    }  //end of geolocator
   }
+}
 
 function initMap() {
   getGeolocation(function(currentLat, currentLong){
@@ -33,8 +33,8 @@ function initMap() {
 function calculateAndDisplayRoute(directionsService, directionsDisplay, currentLat, currentLong) {
   var selectedMode = "DRIVING";
   directionsService.route({
-    origin: {lat: currentLat, lng: currentLong},  // start
-    destination: {lat: Number(schoolLat), lng: Number(schoolLng)},  // school
+    origin: {lat: currentLat, lng: currentLong},
+    destination: {lat: Number(schoolLat), lng: Number(schoolLng)},
 
     travelMode: google.maps.TravelMode[selectedMode]
   }, function(response, status) {

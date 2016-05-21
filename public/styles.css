@@ -3,8 +3,8 @@
 }
 
 html, body {
-    height: 100%;
-    background-color: #a7dbd8;
+  height: 100%;
+  background-color: #a7dbd8;
 }
 h1{
   font-family: 'Righteous', cursive;
@@ -19,86 +19,86 @@ h2{
 }
 
 #find{
-background: url(./arrow.png);
-width: 250px;
-height: 250px;
-border-radius: 50%;
-border: 0px solid;
-background-size: 250px;
+  background: url(./arrow.png);
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  border: 0px solid;
+  background-size: 250px;
 
 }
 
 #school{
-color: black;
-border:3px solid #F38630;
-border-radius: 45px;
-background-color: #E0E4CC;
-padding: .8em;
-text-align: center;
-font-size: 30px;
-text-decoration: none;
+  color: black;
+  border:3px solid #F38630;
+  border-radius: 45px;
+  background-color: #E0E4CC;
+  padding: .8em;
+  text-align: center;
+  font-size: 30px;
+  text-decoration: none;
 }
 
 .more{
-color: black;
-border:2px solid #F38630;
-border-radius: 45px;
-background-color: #69D2E7;
-padding: 5px;
-float: right;
+  color: black;
+  border:2px solid #F38630;
+  border-radius: 45px;
+  background-color: #69D2E7;
+  padding: 5px;
+  float: right;
 }
 
 .container a {
-text-decoration: none;
-font-family: 'Quicksand', sans-serif;
+  text-decoration: none;
+  font-family: 'Quicksand', sans-serif;
 }
 
 #school{
-font-weight: bold;
-font-size: 1.3em;
+  font-weight: bold;
+  font-size: 1.3em;
 }
 
 .details {
-padding-top: 20px;
-padding-left: 30px;
-background-color: #E0E4CC;
-border-radius: 45px;
-border:3px solid #F38630;
+  padding-top: 20px;
+  padding-left: 30px;
+  background-color: #E0E4CC;
+  border-radius: 45px;
+  border:3px solid #F38630;
 }
 
 #principal{
-color: black;
-font-weight: bold;
-font-size: 1.75em;
-line-height: .5em;
+  color: black;
+  font-weight: bold;
+  font-size: 1.75em;
+  line-height: .5em;
 }
 
 #telephone{
-font-size: 1.5em;
-line-height: .5em;
-font-family: 'Quicksand', sans-serif;
+  font-size: 1.5em;
+  line-height: .5em;
+  font-family: 'Quicksand', sans-serif;
 }
 
 #email{
-font-size: 1em;
-line-height: .25em;
+  font-size: 1em;
+  line-height: .25em;
 }
 
 #address{
-font-size: 1em;
-line-height: .25em;
-font-family: 'Roboto Condensed', sans-serif;
+  font-size: 1em;
+  line-height: .25em;
+  font-family: 'Roboto Condensed', sans-serif;
 }
 
 #name{
-font-size: 1.3em;
-line-height: 1em;
-font-family: 'Quicksand', sans-serif;
+  font-size: 1.3em;
+  line-height: 1em;
+  font-family: 'Quicksand', sans-serif;
 }
 
 #lat {
-opacity: 0;}
- #lng{
-opacity: 0;}
+  opacity: 0;}
+  #lng{
+    opacity: 0;}
 
-http://www.colourlovers.com/palette/92095/Giant_Goldfish
+    http://www.colourlovers.com/palette/92095/Giant_Goldfish

@@ -6,7 +6,6 @@ var client = require('../client_js/events');
 var www = require('../bin/www');
 var request = require('supertest')
 var port = process.env.PORT || 3000;
-// var googleDirections = require('../public/googleDirections')
 
 test('basic arithmetic', function (t) {
     t.plan(2);
